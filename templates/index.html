@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomás - Atendimento ao Cliente</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <img src="/static/img/tomas.png" alt="Avatar do Tomás" class="avatar" />
+      <div class="agent-info">
+        <div class="agent-name">Tomás - Atendimento ao Cliente</div>
+        <div class="agent-status">
+          <span class="status-dot"></span> Online
+        </div>
+      </div>
+    </div>
+
+    <div id="chat-log" class="chat-log">
+      <!-- Mensagens serão adicionadas dinamicamente -->
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="user-input" placeholder="Escreva a sua mensagem..." autocomplete="off" disabled />
+      <button id="send-btn" title="Enviar Mensagem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
