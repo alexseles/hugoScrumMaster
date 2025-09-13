@@ -8,9 +8,9 @@ import numpy as np
 from dotenv import load_dotenv
 from flask import Flask, jsonify, render_template, request
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_community.document_loaders import PyMuPDFLoader, TextLoader
-from langchain_community.vectorstores import FAISS
+from langchain.chains import create_stuff_documents_chain
+from langchain.document_loaders import PyMuPDFLoader, TextLoader
+from langchain.vectorstores import FAISS
 from langchain_core.documents import Document
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
