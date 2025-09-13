@@ -41,7 +41,7 @@ html, body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 10;
 }
-.chat-header .avatar { width: 40px; height: 40px; border-radius: 50%; margin-right: 12px; }
+.chat-header .avatar { width: 40px; height: 40px; border-radius: 50%; margin-right: 12px; object-fit: cover; }
 .agent-info .agent-name { font-weight: 600; }
 .agent-info .agent-status { font-size: 0.75rem; opacity: 0.9; display: flex; align-items: center; }
 .status-dot { width: 8px; height: 8px; background-color: #28a745; border-radius: 50%; margin-right: 6px; }
@@ -57,7 +57,7 @@ html, body {
 }
 
 /* 5. Balões de Mensagem */
-.message { display: flex; align-items: flex-end; gap: 10px; max-width: 80%; }
+.message { display: flex; align-items: flex-end; gap: 10px; max-width: 85%; }
 .message.ai { align-self: flex-start; }
 .message.user { align-self: flex-end; flex-direction: row-reverse; }
 .message-content { padding: 10px 15px; border-radius: 20px; line-height: 1.5; color: var(--text-color); }
@@ -65,9 +65,9 @@ html, body {
 .message.user .message-content { background-color: var(--primary-color); color: var(--text-on-primary); border-top-right-radius: 5px; }
 .message-content p { margin: 0; white-space: pre-wrap; word-wrap: break-word; }
 
-/* 6. INDICADOR "A ESCREVER..." (ESTA É A PARTE IMPORTANTE) */
+/* 6. Indicador "Digitando..." */
 .message.ai .typing-indicator {
-    padding: 10px 15px; /* Adiciona padding para se assemelhar a um balão */
+    padding: 10px 15px;
 }
 .typing-indicator span { 
     display: inline-block; 
@@ -76,7 +76,7 @@ html, body {
     border-radius: 50%; 
     background: #adb5bd; 
     animation: bounce 1.4s infinite ease-in-out both; 
-    margin: 0 1px; /* Pequeno espaçamento entre os pontos */
+    margin: 0 1px;
 }
 .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
 .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
@@ -97,18 +97,14 @@ html, body {
     flex-shrink: 0;
 }
 #user-input { flex-grow: 1; border: none; background-color: var(--input-bg); border-radius: 20px; padding: 12px 18px; font-size: 1rem; outline: none; }
-#user-input:disabled { background-color: #e9ecef; }
+#user-input:disabled { background-color: #e9ecef; cursor: not-allowed; }
 #send-btn { border: none; background: none; padding: 0; cursor: pointer; color: var(--primary-color); transition: color 0.2s; }
 #send-btn:hover { color: var(--primary-hover); }
 #send-btn:disabled { color: #a0c3ff; cursor: not-allowed; }
 #send-btn svg { width: 28px; height: 28px; }
 
-/* Botão de Nova Conversa */
-.btn-new-convo { display: inline-block; margin-top: 15px; background-color: transparent; color: var(--primary-color); border: 1px solid var(--primary-color); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.2s; }
-.btn-new-convo:hover { background-color: var(--primary-color); color: var(--text-on-primary); }
-
 /* 8. Media Query para Desktop */
 @media (min-width: 768px) {
     body { padding: 20px; }
-    .chat-container { max-width: 450px; max-height: 90vh; margin: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); }
+    .chat-container { max-width: 550px; max-height: 90vh; margin: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); }
 }

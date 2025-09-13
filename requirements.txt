@@ -1,0 +1,10 @@
+flask==2.3.3
+langchain==0.0.346
+langchain-google-genai==0.0.11
+langchain-community==0.0.19
+pymupdf==1.23.8
+python-dotenv==1.0.0
+faiss-cpu==1.7.4
+sentence-transformers==2.2.2
+google-generativeai==0.3.2
+werkzeug==2.3.7
